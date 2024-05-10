@@ -1,0 +1,7 @@
+import { default as Button } from "./Button"
+import { default as Crew } from "./Crew"
+import { default as Description } from "./Description"
+import { default as Home } from "./Home"
+import { default as Navbar } from "./Navbar"
+import { default as NotFound } from "./NotFound"
+import { default as Technology } from "./Technology"
