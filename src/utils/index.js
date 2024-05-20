@@ -1,5 +1,24 @@
 import { Douglas, Europa, Mark, Mars, Moon, Rocket1, Rocket2, Rocket3, Titan, Victor, Woman } from "../assets"
+export const navbar = [
+    {
+        num: "00",
+        li: "HOME"
+    },
+    {
+        num: "01",
+        li: "DESTINATION"
+    },
+    {
+        num: "02",
+        li: "CREW"
+    },
+    {
+        num: "03",
+        li: "TECHNOLOGY"
+    },
 
+
+]
 export const heroText = [
     {
         h2: "SO, YOU WANT TO TRAVEL TO",

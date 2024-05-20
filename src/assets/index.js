@@ -4,7 +4,7 @@ export { default as Mark } from './crew/Mark.png'
 export { default as Victor } from './crew/Victor.png'
 export { default as Woman } from './crew/Woman.png'
 // crew end
-export { default as DescriptionBg } from './description/DescriptionBg.png'
+export { default as DescriptionBg } from './description/DescriptionBg.jpg'
 export { default as Europa } from './description/Europa.png'
 export { default as Mars } from './description/Mars.png'
 export { default as Moon } from './description/Moon.png'
