@@ -1,18 +1,22 @@
 import { Douglas, Europa, Mark, Mars, Moon, Rocket1, Rocket2, Rocket3, Titan, Victor, Woman } from "../assets"
 export const navbar = [
     {
+        link: "/",
         num: "00",
         li: "HOME"
     },
     {
+        link: "/description",
         num: "01",
         li: "DESTINATION"
     },
     {
+        link: "/crew",
         num: "02",
         li: "CREW"
     },
     {
+        link: "/technology",
         num: "03",
         li: "TECHNOLOGY"
     },
@@ -24,7 +28,7 @@ export const heroText = [
         h2: "SO, YOU WANT TO TRAVEL TO",
         h1: "SPACE",
         p: "Let’s face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well sit back, and relax because we’ll give you a truly out of this world experience!"
-    }
+    },
 ]
 export const descriptionNavbar = [
     {

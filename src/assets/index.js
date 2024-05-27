@@ -10,7 +10,9 @@ export { default as Mars } from './description/Mars.png'
 export { default as Moon } from './description/Moon.png'
 export { default as Titan } from './description/Titan.png'
 // description end
-export { default as HeroBg } from './hero/HeroBg.png'
+export { default as herobg } from './hero/HeroBg.png'
+export { default as heromob } from './hero/HeroBgTablet.png'
+export { default as herotab } from './hero/HeroBgMobile.png'
 // hero end
 export { default as Rocket1 } from './technology/Rocket1.jpg'
 export { default as Rocket2 } from './technology/Rocket2.jpg'

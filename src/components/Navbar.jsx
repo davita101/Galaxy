@@ -1,32 +1,61 @@
-import { useState } from 'react'
+import React, { act, useState } from 'react'
 import { Logo } from '../assets'
 import { navbar } from '../utils'
+import { FaBars } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
+import { FaX } from 'react-icons/fa6';
 
-function NavBar() {
-    const [active, setActive] = useState(0)
 
-    const hanldeClickActive = (index) => {
-        setActive(index)
+function Navbar() {
+    const [active, setactive] = useState(0);
+    const [Click, SetCklick] = useState(true);
+
+    const HendleaCtive = (index) => {
+        setactive(index)
     }
-    console.log(active)
-    return (
-        <div className='flex items-center justify-center pl-[3.2rem] pt-[2.5rem] fixed w-full'>
-            <img className='w-[3rem] h-[3rem]' src={Logo} alt="Atronomy Websiete Logo" />
-            <div className="h-[.1rem] w-full relative bg-white opacity-[.5] left-[4rem] z-[5] rounded-md" />
-            <ul className='flex gap-[3.12rem] p-[3rem] pb-0 bg--color pr-[12rem] pl-[10rem] backdrop-blur-md  z-[3] relative border-[#fff] border-opacity-[0.01] items-center justify-end'>
-                {navbar.map((item, index) => (
-                    <div onClick={() => hanldeClickActive(index)} key={index} className='flex flex-col justify-between items-end  text-white h-[4rem] cursor-pointer z-[3]  subheading-fs--300 '>
-                        <div className='flex gap-[0.68rem]'>
-                            <li className='font-bold'>{item.num}</li>
-                            <li>{item.li}</li>
-                        </div>
-                        {active == index && <div className='bg-white w-full h-[.2rem] rounded-lg' />}
 
-                    </div>
-                ))}
-            </ul>
-        </div>
+    return (
+        <div className='flex items-center justify-between pl-[1rem] pt-[2.5rem] fixed w-full'>
+            <img src={Logo} alt="Website Logo" className='h-[3rem] w-[3rem]' />
+            <div onClick={() => SetCklick(!Click)} className='fixed lg:hidden flex right-[1rem] z-[4] text-[2rem]'>
+                {Click ? <FaBars className='text-white' /> : <FaX className='text-white' />}
+            </div>
+            <div className='h-[.1rem] w-[473px] xl:bg-white bg-transparent relative bg-[#979797] opacity-[0.6] left-[4rem] rounded-md z-[5]' />
+            <div className='lg:flex hidden gap-[4rem]'>
+                <ul className='flex gap-[3.12rem] ml-[2rem] p-[3rem] pb-0 bg--color xl:pr-[10rem]  xl:pl-[12rem]  backdrop-blur-md  z-[3] relative border-white border-opacity-[0.01] items-center justify-end'>
+                    {navbar.map((item, index) => (
+                        <Link to={item.link}>
+                            <div key={index} onClick={() => HendleaCtive(index)} className='lg:flex hidden flex-col justify-between items-end gap-[0.68rem] h-[4rem] subheading-fs--300 cursor-pointer z-[3] text-white'>
+                                <div className='flex gap-[0.68rem]'>
+                                    <span className='font-bold'>{item.num}</span>
+                                    <li>{item.li}</li>
+                                </div>
+                                {active == index && <div className='bg-white w-full h-[.2rem] rounded-t-md ' />}
+                            </div>
+                        </Link>
+                    ))}
+                </ul>
+            </div>
+            {/* mobile version */}
+            <div className="lg:hidden  flex fixed right-0 top-0 ">
+                <ul className={`${Click ? "translate-x-[500px]" : "translate-x-0"} flex gap-[2rem] flex-col pb-[7rem] bg--color pl-[3rem] relative xl:pl-[12rem]  backdrop-blur-md  w-[15rem] h-[100vh] z-[3] border-white border-opacity-[0.01] items-start justify-center `}>
+                    {navbar.map((item, index) => (
+                        <Link to={item.link}>
+                            <div key={index} onClick={() => HendleaCtive(index)} className='flex flex-row w-[12rem] justify-between gap-[0.68rem] subheading--300 cursor-pointer z-[3] text-white'>
+                                <div className='flex gap-[0.68rem]'>
+                                    <span className='font-bold'>{item.num}</span>
+                                    <li>{item.li}</li>
+                                </div>
+                                {active == index && <div className='bg-white w-[0.2rem] h-[full] rounded-t-md ' />}
+                            </div>
+                        </Link>
+                    ))}
+                </ul>
+            </div>
+
+
+        </div >
     )
 }
 
-export default NavBar 
+export default Navbar
