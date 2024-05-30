@@ -86,12 +86,6 @@
     font-family: "Bellefair", serif;
 
 }
-
-body{
-    font-family: "Barlow Condensed", sans-serif;
-    background: url('./assets/hero/HeroBg.png') no-repeat;
-    background-size: cover;
-}
 .button--hover div{
     transition: all 300ms ease;
 }
@@ -99,4 +93,51 @@ body{
     width: 450px;
     height: 450px;
     transition: all 300ms ease;
+}
+
+body{
+    font-family: "Barlow Condensed", sans-serif;
+    background: url('./assets/hero/HeroBg.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    
+}
+@media (max-width: 1024px){
+    body{
+        background: url("./assets/hero/HeroBgTablet.png")  no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    .button--hover:hover div{
+        width: 250px;
+        height: 250px;
+        transition: all 300ms ease;
+    }
+    .heading-fs--100{
+        line-height: 10rem;
+    }
+}
+@media (max-width: 520px){
+    body{
+        background: url("./assets/hero/HeroBgMobile.png")  no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .button--hover:hover div{
+        width: 250px;
+        height: 250px;
+        transition: all 300ms ease;
+    }
+
+    .heading-fs--100{
+        font-size: var(--heading-200);
+    }
+    .subheading-fs--100 {
+        font-size: var(--subheading-fs--300);
+    }
+    .paragraph-fs{
+        font-size: var(--subheading-300);
+    }
 }
