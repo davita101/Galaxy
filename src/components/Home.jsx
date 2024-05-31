@@ -4,7 +4,7 @@ import { herobg, heromob, herotab } from '../assets'
 
 function Home() {
     return (
-        <div className=' w-full h-[100vh] flex lg:text-start text-center lg:p-[10.5rem] p-[1.5rem]'>
+        <div className=' home-bg w-full h-[100vh] flex lg:text-start text-center lg:p-[10.5rem] p-[1.5rem]'>
             <div className='flex lg:flex-row flex-col lg:gap-0 gap-[2rem] lg:items-end items-center lg:justify-between justify-end w-full'>
                 <div className='text-[white] pb-0 grid gap-[1rem] '>
                     <h2 className='subheading-fs--100 font-thin ff-primary-100 primary-color--200'>{heroText[0].h2}</h2>
@@ -14,7 +14,7 @@ function Home() {
 
                 <div className='button--hover lg:w-[274px] w-[205px] h-[205px] lg:h-[274px] border-[none]  heading-fs--400 relative ff-primary-300 bg-white rounded-full cursor-pointer text-black flex justify-center items-center ' >
                     EXPLORE
-                    <div className=' w-[205px] h-[205px] bg-white rounded-full z-[-1] opacity-[.5] absolute' />
+                    <div className=' w-[205px] h-[205px] bg-white rounded-full z-[1] opacity-[.5] absolute' />
                 </div>
             </div >
 
